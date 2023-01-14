@@ -1,5 +1,8 @@
 {
   "name": "mathieu-portfolio",
+  "engines": {
+    "node": "16.x"
+  }, 
   "version": "1.0.0",
   "private": true,
   "scripts": {
