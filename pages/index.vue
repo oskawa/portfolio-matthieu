@@ -20,13 +20,13 @@ import axios from "axios";
 export default {
   head() {
     return {
-      title: "Portfolio Maxime Eloir - Homepage",
+      title: "Portfolio Matthieu Delomez - Homepage",
       meta: [
         {
           hid: "description",
           name: "description",
           content:
-            "My portfolio ! A selection of print & web projects and missions carried out during my studies and my business.",
+            "Matthieu Delomez,. Directeur artistique &. UX/UI Designer. Toujours enthousiaste à l'idée de réaliser de nouveaux projets et faire face à des challenges.",
           hid: "description",
         },
       ],

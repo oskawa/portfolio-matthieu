@@ -61,7 +61,7 @@ export default {
           hid: "description",
           name: "description",
           content:
-            "My portfolio ! A selection of print & web projects and missions carried out during my studies and my business.",
+            "Contactez moi ! ",
           hid: "description",
         },
       ],

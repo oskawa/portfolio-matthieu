@@ -6,14 +6,14 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'mathieu-portfolio',
+    title: 'matthieu-portfolio',
     htmlAttrs: {
       lang: 'fr'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: "Matthieu Delomez,. Directeur artistique &. UX/UI Designer. Toujours enthousiaste à l'idée de réaliser de nouveaux projets et faire face à des challenges." },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
