@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@300;400;500&display=swap");
+/* Inter 
+300 : Light
+400 : Regular 
+500 : Medium 
+700 : Bold */
+
+/* Poppins 
+300 : Light 
+500 : Medium */
+html {
+    font-size: 10px;
+}
+
+:root {
+    --background-color: #1a1a1a;
+    --text-color: #eeeeee;
+    --size-h1: 6.1rem;
+    --size-h2: 3.9rem;
+    --size-h3: 3.1rem;
+    --size-h5: 1.6rem;
+    --size-p: 1.6rem;
+    --font-paragraph: "Poppins", sans-serif;
+    --font-title: "Inter", sans-serif;
+    --line-heigt-p : 2.7rem;
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --size-h1: 4.9rem;
+    }
+}
+@media screen and (max-width: 992px) {
+    :root {
+        --size-h1: 4.9rem;
+        --size-h2: 3.1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    :root {
+        --size-h1: 4.9rem;
+        --size-h2: 3.1rem;
+        --size-h3: 2.5rem;
+        --size-h5: 1.4rem;
+        --size-p: 1.6rem;
+    }
+}
+@media screen and (max-width: 576px) {
+    :root {
+        --size-h1: 3.9rem;
+        --size-h2: 2.5rem;
+        --size-h3: 2.5rem;
+        --size-h5: 1.3rem;
+        --size-p: 1.6rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    :root {
+        --size-h1: 3.1rem;
+        --size-h2: 2.5rem;
+        --size-h3: 2.5rem;
+        --size-h5: 1.3rem;
+        --size-p: 1.2rem;
+    }
+}
+
+body {
+    background-color: var(--background-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5
+{
+    color: var(--text-color);
+    font-family: var(--font-title);
+}
+p,a, ul, li,span, h6{
+    color: var(--text-color);
+    font-family: var(--font-paragraph);
+    line-height: var(--line-heigt-p);
+    font-size: var(--size-p);
+}
+
+h1{
+    font-size: var(--size-h1);
+    font-weight: 500 ;
+}
+h2{
+    font-size: var(--size-h2);
+}
+h3{
+    font-size: var(--size-h3);
+    font-weight: 500 ;
+    
+}
+h5{
+    font-size: var(--size-h5);
+    font-weight: 400;
+    
+}
+p{
+    font-size: var(--size-p);
+    font-weight: 400;
+    margin: 0;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+section.home, section.contact{
+    
+    position: relative;
+}
+.home-container, .home-row{
+    height: 100%;
+}
+
+.home-row{
+    align-items: center;
+}
+.contact-row{
+    align-items: flex-start;
+}
+section.projects, section.single-project, section.contact, section.home{
+    margin-top: 24rem;
+}
+.projects-informations{
+    display: flex;
+    margin-top: 6.4rem;
+    
+}
+.projects-single__link, a.mail{
+    text-decoration: none;
+}
+.projects-single__link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.projects-informations__single:not(:last-child){
+    margin-right: 6rem;
+}
+.projects-informations__single ul{
+    padding: 0;
+    list-style: none;
+}
+.projects-informations__single ul li{
+    font-weight: 400;
+}
+.projects-single{
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.6rem 0;
+   
+}
+.projects-single:first-child{
+    margin-top: 10rem;
+}
+.projects-single__title{
+    display: flex;
+    align-items: center;
+}
+.projects-single__title_number{
+    margin-right: 5rem;
+}
+
+.header-col{
+    padding-top: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-menu a:not(:last-child) {
+    margin-right: 3.2rem;
+}
+
+.single-project__title{
+    text-align: center;
+    margin-bottom: 6rem;
+}
+.single-project__title-sub{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.single-project__title-sub hr{
+    width: 12rem;
+    padding: 0 3rem;
+}
+.single-project__title-sub h6:first-child{
+    margin-right: 3rem;
+}
+.single-project__title-sub h6:last-child{
+    margin-left: 3rem;
+}
+.acf-img-full img{
+    max-height: 550px;
+    width: 100%;
+    height: 550px;
+}
+.acf-img-full__row, .acf-img-typo__row, .contact-bottom__row{
+    justify-content: center;
+}
+.acf-text-title{
+    margin-bottom: 16rem;
+    margin-top: 16rem;
+}
+.acf-text-title p{
+
+font-weight: 500;
+font-size: 16px;
+line-height: 27px;
+letter-spacing: -0.02em;
+color: #929292;
+
+
+}
+.acf-img-typo {
+    margin-bottom: 3rem;
+}
+.acf-img-typo img{
+    max-height: 35rem;
+    height: 35rem;
+    width: 100%;
+}
+
+.img-colors__content{
+    background-color: #929292;
+    width: 100%;
+    border-radius: 2rem;
+    height: 32rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+}
+.contact-bottom__col{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-socials ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+.contact-socials li:not(:last-child){
+    margin-right: 1.5rem;
+}
