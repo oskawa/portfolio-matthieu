@@ -33,10 +33,10 @@
         </div>
       </div>
       <div class="row projects-list">
-        <div class="col-10 offset-md-1">
-          <div class="projects-single">
+        <div class="col-md-10 col-12 offset-md-1">
+          <div class="projects-single" v-for="(project, index) in projects" :key="project.id">
 
-            <nuxt-link v-for="(project, index) in projects" :key="project.id" class="projects-single__link" :to="`/project/${project.id}`" >
+            <nuxt-link class="projects-single__link" :to="`/project/${project.id}`" >
             <div class="projects-single__title">
                 <h2 class="projects-single__title_number">0{{index+1}}</h2>
                 <h2>{{project.acf.project_title}}</h2>

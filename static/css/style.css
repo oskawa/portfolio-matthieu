@@ -207,9 +207,7 @@ section.projects, section.single-project, section.contact, section.home{
     margin-left: 3rem;
 }
 .acf-img-full img{
-    max-height: 550px;
-    width: 100%;
-    height: 550px;
+width: 100%;
 }
 .acf-img-full__row, .acf-img-typo__row, .contact-bottom__row{
     justify-content: center;
@@ -248,7 +246,9 @@ color: #929292;
     justify-content: center;
     align-items: center;
 }
-
+.img-colors__content .isBlack{
+    color: #1a1a1a;
+}
 .contact-bottom{
     position: fixed;
     bottom: 0;
@@ -267,4 +267,21 @@ color: #929292;
 }
 .contact-socials li:not(:last-child){
     margin-right: 1.5rem;
+}
+.acf-outside-grid{
+    padding: 0 5%;
+}
+.acf-outside-grid img{
+    width: 100%;
+   
+}
+@media (max-width:768px) {
+    .projects-single__link{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }    
+    .projects-single__type{
+        margin-left: 8.8rem;
+    }
 }

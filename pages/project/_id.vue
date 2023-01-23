@@ -12,7 +12,7 @@
     <div v-for="content in project.repeatable_content">
       <div
         v-if="content.acf_fc_layout === 'classic_image'"
-        class="acf-img-full container-fluid"
+        class="acf-img-full container"
       >
         <div class="row acf-img-full__row">
           <div class="col-12 col-lg-10">
@@ -23,7 +23,7 @@
 
       <div
         v-if="content.acf_fc_layout === 'title_text_content'"
-        class="acf-text-title container-fluid"
+        class="acf-text-title container"
       >
         <div class="row">
           <div class="offset-md-1 col-md-5">
@@ -33,35 +33,51 @@
         </div>
       </div>
 
-      <div
-        v-if="content.acf_fc_layout === 'images_typo'"
-        class="acf-img-typo container-fluid"
-      >
+      <div v-if="content.acf_fc_layout === 'images_typo'" class="acf-img-typo container">
         <div class="row acf-img-typo__row">
-          <div class="col-md-5 col-12">
-            <img src="" alt="" />
-          </div>
-          <div class="col-md-5 col-12">
-            <img src="" alt="" />
+          <div
+            class="col-md-5 col-12"
+            v-for="typo in content.typo_image_single"
+            :key="typo.ID"
+          >
+            <img :src="typo.sizes.medium_large" alt="" />
           </div>
         </div>
       </div>
-      <div v-if="content.acf_fc_layout === 'application_color'" class="acf-img-colors container-fluid">
-        <div class="row" >
-          <div class="col-md-6 col-12" v-for="(color, index) in content.colors" :key="index">
-            <div class="img-colors__content" :style="`background-color:${color.hexa_color}`">
-              <span>{{color.titre}}</span><br />
-              <span>{{color.hexa_color}}</span>
+      <div
+        v-if="content.acf_fc_layout === 'application_color'"
+        class="acf-img-colors container"
+      >
+        <div class="row">
+          <div
+            v-for="(color, index) in content.colors"
+            :key="index"
+            :class="index > 1 ? 'col-md-4 col-12' : 'col-md-6 col-12'"
+          >
+            <div
+              class="img-colors__content"
+              :style="`background-color:${color.hexa_color}`"
+            >
+              <span :class="color.is_black ? 'isBlack' : 'isWhite'">{{
+                color.titre
+              }}</span
+              ><br />
+              <span :class="color.is_black ? 'isBlack' : 'isWhite'">{{
+                color.hexa_color
+              }}</span>
             </div>
           </div>
-          
-          <!-- <div class="col-md-4 col-12" v-else>
-            <div class="img-colors__content">
-              <span>Couleur principale 01</span><br />
-              <span>#361019</span>
-            </div>
-          </div> -->
-          
+        </div>
+      </div>
+      <div v-if="content.acf_fc_layout === 'outside_image_grid'" class="acf-outside-grid container-fluid">
+        <div class="row acf-outside-grid__row">
+          <div
+            class="col-12"
+            v-for="outside_image in content.wireframe_userflow_gallery"
+            :key="outside_image.ID"
+          >
+            <img :src="outside_image.url" alt="" />
+          </div>
         </div>
       </div>
     </div>
